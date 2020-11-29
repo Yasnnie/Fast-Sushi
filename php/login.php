@@ -19,19 +19,24 @@ include("conexao.php");
 </head>
 <body>
     
-    <div id="box">
+<div id="outer">
+    <div id="middle">
+        <div id="inner">
         
         <h1>Faça seu Login</h1>
-        <input type="text">
+        <input type="text" placeholder="E-mail">
         <br>
-        <input type="password" name="" id="">
+        <input type="password" name="" id="" placeholder="Senha">
         <br>
         <button>Entrar</button>
 
-        <p>Não tem um login? <a href="">Cadastre-se</a></p>
+        <p>Não tem uma conta? <a href="">Cadastre-se!</a></p>
     
 
+        </div>
     </div>
+</div>
+    
 
 
 
