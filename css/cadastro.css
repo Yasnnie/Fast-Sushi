@@ -1,17 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body{
     position: block;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: url(../img/fundo6.jpg);
+    background-size: 1920px 1080px;
     font-family: 'Poppins', sans-serif;
-    background: url(../img/fundo7.jpg);
-    background-size: 1920px 1100px;
-  
 }
-
 #outer {
     
     height: 400px; 
@@ -30,7 +25,7 @@ body{
 
 #middle {
     position: absolute; 
-    top: 50%;
+    top: 70%;
 } 
 
 #middle[id] {
@@ -39,28 +34,29 @@ body{
     position: static;
 }
 
-
 #inner {
-     position: relative; 
-     top: -50%;
-    background: rgb(116, 0, 0);
-    padding: 200px 20px;
+    position: relative; 
+    top: -50%;
     color: white;
-    border-bottom-right-radius: 40px;
-    border-bottom-left-radius: 40px;
-
+    margin: auto;
+    width: 400px;
+    height: 1000px;
+    padding-top: 190px;
+    text-align: center;
+    color: white;
+    background: rgb(116, 0, 0);
     }
 
-#inner h1{
-
-    text-transform: uppercase;
-    
+ul{
+    margin-left:-35px ;
+    list-style: none;
 }
 
-input[type="text"],input[type="password"]{
+
+
+
+input[type="text"],input[type="password"],select{
     margin-top: 15px;
-    height: 25px;
-    width: 250px;
     background: unset;
     border-bottom: solid 2px white;
     border-right: solid 1px white;
@@ -80,8 +76,15 @@ input[type="text"]::-webkit-input-placeholder,  input[type="password"]::-webkit-
     color: rgba(255, 255, 255, 0.514);
     font-size: 12px;
 
-
  }
+ 
+
+ select{
+     color: white;
+ }
+option{
+    color: black;
+}
 
  button{
     background: white;
@@ -103,16 +106,11 @@ input[type="text"]::-webkit-input-placeholder,  input[type="password"]::-webkit-
     transition: 0.2s;
  }
 
- p{
-     margin-top:35px;
-     font-size: 13px;
+ #email, #senha,#confsenha{
+     width: 330px;
  }
 
- #inner a {
-    color: white;
+ input[type="radio"]{
+     border: solid 2px white;
+     background: none;
  }
-
- #inner a:hover{
-    color: rgb(224, 0, 0);
- }
-
