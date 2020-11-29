@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: url(../img/fundo7.jpg);
+    background-size: 1920px 1100px;
+  
+}
+
+#box{
+    padding-top: 100px;
+    margin: auto;
+    background: rgb(116, 0, 0);
+    width: 390px;
+    height: 200vh;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+#box h1{
+
+}
