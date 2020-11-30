@@ -41,7 +41,7 @@ body{
     margin: auto;
     width: 400px;
     height: 1000px;
-    padding-top: 190px;
+    padding-top: 30%;
     text-align: center;
     color: white;
     background: rgb(116, 0, 0);
@@ -77,10 +77,16 @@ input[type="text"]::-webkit-input-placeholder,  input[type="password"]::-webkit-
     font-size: 12px;
 
  }
- 
+ label{
+     font-size: 12px;
+ }
 
+ #numeroR{
+     width: 50px;
+ }
  select{
      color: white;
+     width: 200px;
  }
 option{
     color: black;
@@ -110,7 +116,43 @@ option{
      width: 330px;
  }
 
- input[type="radio"]{
-     border: solid 2px white;
-     background: none;
+ .containerRadio{
+     display: inline-block;
+     position: relative;
+     cursor: pointer;
+     user-select: none;
+    margin-left: 10px;
+    font-size: 16px;
+
+ }
+
+ .containerRadio input{
+     display: none;
+ }
+
+ .containerRadio .circle{
+     display: inline-block;
+     position: relative;
+     width: 14px;
+     height: 14px;
+     background-color: #eeeeee;
+     right: 0;
+     top: 0;
+        border-radius: 50%;
+ }
+
+ .containerRadio input:checked + .circle{
+     background-color: white;
+ }
+
+ .containerRadio input:checked + .circle:after{
+    content: '';
+    height: 7px;
+    width: 7px;
+    background-color: rgb(116, 0, 0);
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
  }
