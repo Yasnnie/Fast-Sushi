@@ -10,7 +10,8 @@ body{
 header {
     padding: 10px;
     width: 100%;
-    background:rgb(116, 0, 0); 
+    height: 25px;
+    background:url(../img/bar.png); 
     text-align: right;
 }
 

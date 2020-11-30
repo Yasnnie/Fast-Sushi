@@ -44,8 +44,10 @@ body{
     padding-top: 30%;
     text-align: center;
     color: white;
-    background: rgb(116, 0, 0);
+    background: url(../img/cadastro.png);
     }
+
+
 
 ul{
     margin-left:-35px ;
