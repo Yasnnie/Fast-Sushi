@@ -50,9 +50,15 @@
                     </li>
                     <li>
                         <input type="password" name="" id="senha" placeholder="Senha">
+                        <ul class="veri" id="veriSenha">
+                            <li></li>
+                        </ul>
                     </li>
                     <li>
                         <input type="password" name="" id="confsenha" placeholder="Confirme a Senha">
+                        <ul class="veri" id="veriConfSenha">
+                            <li></li>
+                        </ul>
                     </li>
                     <li>
                         <label for="">Estado:</label>
