@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+//include("conexao.php");
 
 
 
@@ -27,25 +27,26 @@ include("conexao.php");
             <div id="inner">
                 <ul>
                     <li>
-                        <label for="option1" class="containerRadio">Pessoa Física:
+                        <label for="option1" class="containerRadio" onchange="radioVerify()">Pessoa Física:
                             <input type="radio" name="tipoDeConta" id="option1">
                             <span class="circle"></span>
                         </label>
-                        <label for="option2" class="containerRadio">Estabelecimento:
+                        <label for="option2" class="containerRadio" onchange="radioVerify()">Estabelecimento:
                             <input type="radio" name="tipoDeConta" id="option2">
                             <span class="circle"></span>
                         </label>
 
                     </li>
-                    <li>
-                        <input type="text" name="" id="" placeholder="Nome">
-                        <input type="text" name="" id="" placeholder="Sobrenome">
+                    <li id="tipoArea">
+                        <h3>Selecione o tipo de conta</h3>
                     </li>
-                    <li>
-                        <input type="text" name="" id="email" placeholder="E-mail">
+
+                    <li id="CPForCNPJ">
+                        <br>
                     </li>
+
                     <li>
-                        <input type="text" name="" id="email" placeholder="CPF">
+                        <input type="text" name="" id="email" placeholder="E-mail" pattern="\S+@\w+\.\w{2,6}(\.\w{2})?">
                     </li>
                     <li>
                         <input type="password" name="" id="senha" placeholder="Senha">
@@ -60,11 +61,12 @@ include("conexao.php");
                     <label for="">Cidade:</label>
                     <select name="" id="labelCidade"></select>
                     <li>
-                        <input type="text" name="" id="" placeholder="Rua"> <input type="text" name="" id="numeroR" placeholder="Nº">
+                        <input type="text" name="" id="" placeholder="Rua"> 
+                        <input type="text" name="" id="numeroR" placeholder="Nº" oninput="formatarNumero()">
                     </li>
                     <li>
                         <label for="">Telefone:</label>
-                        <input type="text" name="" id="" placeholder="(__)____________">
+                        <input id="telefone" type="text" name="" id="" placeholder="(__)____________" oninput="ajeitarTelefone()">
                     </li>
                     <li><button>Cadastrar</button></li>
                 </ul>
@@ -73,9 +75,7 @@ include("conexao.php");
     </div>
     <script src="../js/pluginIBGE.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-
-    </script>
+    <script src="../js/formatarCadastro.js"></script>
 </body>
 
 </html>
