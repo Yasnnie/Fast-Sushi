@@ -7,8 +7,9 @@ body{
     background-size: 1920px 1080px;
     font-family: 'Poppins', sans-serif;
 }
+
+/*DIVISÕES PARA CENTRALIZAR*/
 #outer {
-    
     height: 400px; 
     overflow: hidden; 
     position: relative; 
@@ -16,12 +17,10 @@ body{
     margin: auto;
 }
 
-
 #outer[id] {
     display: table; 
     position: static;
 }
-
 
 #middle {
     position: absolute; 
@@ -34,25 +33,74 @@ body{
     position: static;
 }
 
+/*BLOCO FINAL E PRINCIPAL*/
 #inner {
     position: relative; 
     top: -50%;
     color: white;
     margin: auto;
     width: 400px;
-    height: 1000px;
-    padding-top: 30%;
+    height: 1100px;
     text-align: center;
     color: white;
     background: url(../img/cadastro.png);
     }
 
-
+#inner img {
+    width: 120px;
+    height: 120px;
+}
 
 ul{
     margin-left:-35px ;
     list-style: none;
 }
+
+/*STYLE INPUT RADIO*/
+.containerRadio{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.containerRadio input{
+    display: none;
+}
+
+.containerRadio .circle{
+    display: inline-block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background-color: #eeeeee;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.containerRadio input:checked + .circle{
+    background-color: white;
+    transition: 0.4s;
+}
+
+.containerRadio input:checked + .circle:after{
+   content: '';
+   height: 7px;
+   width: 7px;
+   background-color: rgb(116, 0, 0);
+   position: absolute;
+   border-radius: 100%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   transition: 0.4s;
+}
+
+/*STYLE INPUT TEXT*/
 
 input[type="text"],input[type="password"],select{
     margin-top: 15px;
@@ -67,31 +115,58 @@ input[type="text"],input[type="password"],select{
 }
 
 textarea:focus, input:focus, select:focus, button:focus {
-
     outline: 0;
 } 
 
 input[type="text"]::-webkit-input-placeholder,  input[type="password"]::-webkit-input-placeholder{
     color: rgba(255, 255, 255, 0.514);
     font-size: 12px;
-
  }
- label{
+ 
+label{
      font-size: 12px;
  }
 
- #numeroR{
+#numeroR{
      width: 50px;
  }
- select{
+
+ #email, #senha,#confsenha, #cpf, #cnpj{
+    width: 300px !important;
+}
+
+/*STYLE VERIFICAÇÃO DE SENHA*/
+.veri{
+    
+    position: relative;
+    list-style: none;
+    z-index: 30;
+ }
+
+ .veri li{
+    position: absolute;
+    background-color: rgb(173, 0, 0);
+    border-radius: 100px;
+    width: 10px;
+    top:-20px;
+    right: 20px;
+    height: 10px;
+    z-index: 30;
+ }
+
+/*STYLE SELECT*/
+select{
      color: white;
      width: 200px;
  }
+
 option{
     color: black;
 }
 
- button{
+/*STYLE BUTTON*/
+
+button{
     background: white;
     color: rgb(116, 0, 0);
     text-decoration: none;
@@ -109,67 +184,4 @@ option{
     box-shadow: -4px 4px 20px black;
     color: white;
     transition: 0.2s;
- }
-
- #email, #senha,#confsenha, #cpf, #cnpj{
-     width: 300px !important;
- }
-
- .containerRadio{
-     display: inline-block;
-     position: relative;
-     cursor: pointer;
-     user-select: none;
-    margin-left: 10px;
-    font-size: 16px;
-
- }
-
- .containerRadio input{
-     display: none;
- }
-
- .containerRadio .circle{
-     display: inline-block;
-     position: relative;
-     width: 14px;
-     height: 14px;
-     background-color: #eeeeee;
-     right: 0;
-     top: 0;
-        border-radius: 50%;
- }
-
- .containerRadio input:checked + .circle{
-     background-color: white;
- }
-
- .containerRadio input:checked + .circle:after{
-    content: '';
-    height: 7px;
-    width: 7px;
-    background-color: rgb(116, 0, 0);
-    position: absolute;
-    border-radius: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
- }
-
- .veri{
-    
-    position: relative;
-    list-style: none;
-    z-index: 30;
- }
-
- .veri li{
-    position: absolute;
-    background-color: rgb(173, 0, 0);
-    border-radius: 100px;
-    width: 10px;
-    top:-20px;
-    right: 20px;
-    height: 10px;
-    z-index: 30;
  }

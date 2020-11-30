@@ -24,7 +24,7 @@
     <div id="outer">
         <div id="middle">
             <div id="inner">
-
+                <img src="../img/logo.png" alt="">
                 <h1>Faça seu Login</h1>
                 <input type="text" placeholder="E-mail">
                 <br>

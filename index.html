@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,42 @@
     <title>Fast Sushi</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
+
 <body onLoad="slideFunction()">
     <header>
-        <img src="" alt="">
+        <img src="./img/logo.png" alt="">
         <a href="./php/login.php">entrar</a>
     </header>
-   
+
     <div id="slide">
         <ul>
-            <li class="seta" onclick=prevSlide(); ></li>
+            <li class="seta" onclick=prevSlide();></li>
         </ul>
         <div id="desc">
-            <h1>Hmmmmmmmm</h1>
-            <p> Escolha um sushi de sua preferência</p>
+            <h1>Gosta de comida japonêsa ?</h1>
+            <br>
+            <p> Se você gosta de comida japonêsa você está no lugar certo! Cadastre-se em nosso site e conheça os mais
+                diversos restaurantes de comida japônesa da sua região.</p>
             <br>
             <a href="">Peça agora!</a>
         </div>
-        
+
         <ul>
-            <li class="inverse"  onclick=nextSlide();></li>
+            <li class="inverse" onclick=nextSlide();></li>
         </ul>
 
         <div class="imgBox">
-           
+
             <img src="./img/fundo1.jpg" alt="" class="active">
             <img src="./img/fundo2.jpg" alt="">
             <img src="./img/fundo3.jpg" alt="">
             <img src="./img/fundo4.jpg" alt="">
         </div>
-        
+
     </div>
-    
+
     <script src="./js/slide.js"></script>
     <script src="./js/pluginIBGE.js"></script>
 </body>
+
 </html>

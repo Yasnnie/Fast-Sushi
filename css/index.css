@@ -7,15 +7,30 @@ body{
     font-family: 'Poppins', sans-serif;
     background: rgb(116, 0, 0);
 }
+
+/* BARRA DE ENTRAR*/
 header {
     padding: 10px;
     width: 100%;
     height: 25px;
     background:url(../img/bar.png); 
-    text-align: right;
+    text-align: center;
+    border-bottom: solid 2px white;
+}
+
+header img{
+    position: absolute;
+z-index: 100;
+    margin-top: -20px;
+    margin-left: -40px;
+    width: 120px;
+    height: 120px;
 }
 
 header a {
+    position: absolute;
+    top: 9px;
+    right: 0;
     margin-right: 39px;
     font-size: 15px;
     padding: 0px 5px;
@@ -36,6 +51,8 @@ header a:hover{
     transition: 0.5s;
     box-shadow: 9px 8px 40px black;
 }
+
+/*SLIDE*/
 
 #slide{
     position: block;
@@ -60,39 +77,8 @@ header a:hover{
     transition: 1s;
 }
 
+/*BOTÕES DE PASSAR O SLIDE*/
 
-#desc{
-    padding: 10px;
-    text-align: center;
-    bottom: 130px;
-    left: 130px;
-    position: fixed;
-    color: white;
-    background:rgb(116, 0, 0); 
-    width: 350px;
-    height: 140px;
-    box-shadow: 9px 8px 40px black;
-    z-index: 30;
-}
-
-#desc a{
-    background: white;
-    color: rgb(116, 0, 0);
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px;
-    margin-top: 50px;
-    border-radius: 100px;
-    box-shadow: -7px 7px 20px black;
-    transition: 0.2s;
-}
-
-#desc a:hover{
-    background: rgb(151, 0, 0);
-    box-shadow: -7px 7px 20px black;
-    color: white;
-    transition: 0.2s;
-}
 #slide ul{
     list-style: none;
     z-index: 30;
@@ -157,4 +143,54 @@ header a:hover{
     background: rgb(151, 0, 0);
     transition: 0.4s;
     z-index: 30;
+}
+
+
+/*CAIXA DE DESCRIÇÃO*/
+
+#desc{
+    padding: 10px;
+    text-align: center;
+    bottom: 130px;
+    left: 130px;
+    position: fixed;
+    color: white;
+    background:url(../img/desc.png); 
+    background-size: 370px 220px;
+    width: 350px;
+    height: 210px;
+    box-shadow: 9px 8px 40px black;
+    z-index: 30;
+}
+
+#desc h1{
+    font-size: 22px;
+    text-transform: uppercase;
+    background: white;
+    color: rgb(116, 0, 0) ;
+    border-radius: 10px;
+}
+
+#desc p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+#desc a{
+    background: white;
+    color: rgb(116, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 100px;
+    box-shadow: -7px 7px 20px black;
+    transition: 0.2s;
+}
+
+#desc a:hover{
+    background: rgb(151, 0, 0);
+    box-shadow: -7px 7px 20px black;
+    color: white;
+    transition: 0.2s;
 }

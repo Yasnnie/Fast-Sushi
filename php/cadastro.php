@@ -25,6 +25,7 @@
     <div id="outer">
         <div id="middle">
             <div id="inner">
+                <img src="../img/logo.png" alt="">
                 <ul>
                     <li>
                         <label for="option1" class="containerRadio" onchange="radioVerify()">Pessoa Física:

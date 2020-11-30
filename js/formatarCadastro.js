@@ -12,7 +12,7 @@ function radioVerify() {
     } else if($("#option2").prop("checked")) {
         let value = `<input type="text" name="" id="nome" placeholder="Nome">`
         document.getElementById('tipoArea').innerHTML = value;
-        document.getElementById('nome').style.width = "330px";
+        document.getElementById('nome').style.width = "300px";
         
         
         let value2 = `<input type="text" name="" placeholder="CNPJ" id = "cnpj">`;
