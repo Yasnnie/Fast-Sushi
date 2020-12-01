@@ -71,18 +71,13 @@
 
                         <li>
                             <label for="">Estado:</label>
-                            <div id="auxSelectEstado">
-                                <div class="custom-select" style="width:200px;">
-                                    <select name="" id="labelEstados" onchange="getCidades()">
-                                        <option value="">Selecione</option>
-                                    </select>
-                                </div>
-                            </div>
-
+                            <div id="auxSelectEstado"></div>
 
                         </li>
                         <label for="">Cidade:</label>
                         <select name="" id="labelCidade"></select>
+
+
                         <li>
                             <input type="text" name="" id="bairro" placeholder="Bairro" style="width: 300px;">
                         </li>
