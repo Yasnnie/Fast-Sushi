@@ -37,8 +37,9 @@
 
     <div id="blocoEstabelecimentos">
         <div id="buscarRegiao">
+            <div class="aux">
             <label for="">Estado:</label>
-            <div class="custom-select">
+            <div id="" class="custom-select">
                 <select name="" id="">
                     <option value="">Selecione</option>
                     <option value="">Opção 2</option>
@@ -53,8 +54,10 @@
                     <option value="">Opção 3</option>
                 </select>
             </div>
-
-            <a href="">Buscar <i class="fa fa-search" aria-hidden="true"></i></a>
+                <a href="">Buscar <i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+          
+           
         </div>
 
         <div id="estabelecimentos">
