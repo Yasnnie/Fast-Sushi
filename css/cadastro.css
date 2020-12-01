@@ -102,7 +102,7 @@ ul{
 
 /*STYLE INPUT TEXT*/
 
-input[type="text"],input[type="password"],select{
+input[type="text"],input[type="password"]{
     margin-top: 15px;
     background: unset;
     border-bottom: solid 2px white;
@@ -114,7 +114,7 @@ input[type="text"],input[type="password"],select{
     color: white;
 }
 
-textarea:focus, input:focus, select:focus, button:focus {
+textarea:focus, input:focus, button:focus {
     outline: 0;
 } 
 
@@ -196,14 +196,73 @@ label{
  }
 
 /*STYLE SELECT*/
-select{
-     color: white;
-     width: 200px;
- }
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none;
+  }
+  
+  .select-selected {
+    background-color: firebrick;
+    padding: 5px;
+    border-top: unset !important;
+    border-bottom: solid 2px white !important;
+    border-right: solid 1px white !important; 
+    border-left: solid 1px white !important;
+    border-radius: 100px;
+    color: white !important;
+  }
+  
 
-option{
-    color: black;
-}
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+ 
+  .select-items div,.select-selected {
+    color:firebrick;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+ 
+  .select-items {
+    position: absolute;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 40px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.445);
+    
+  }
 
 /*STYLE BUTTON*/
 

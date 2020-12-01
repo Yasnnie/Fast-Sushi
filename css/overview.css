@@ -97,6 +97,7 @@ header img{
 
     }   
 #buscarRegiao{
+    display: flex;
     width: 1000px;
     padding: 10px;
     text-align: center;
@@ -107,24 +108,84 @@ header img{
     border-top-right-radius: 50px;
 }
 
-select{
-    height: 35px;
-    width: 160px;
-    background: unset;
-    border-bottom: solid 2px white;
-    border-right: solid 1px white;
-    border-left: solid 1px white;
-    border-top: unset;
-    padding: 7px;
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    width: 200px;
+  }
+  
+  .custom-select select {
+    display: none;
+  }
+  
+  .select-selected {
+    background-color: firebrick;
+    padding: 5px;
+    border-top: unset !important;
+    border-bottom: solid 2px white !important;
+    border-right: solid 1px white !important; 
+    border-left: solid 1px white !important;
+    border-radius: 100px;
+    color: white !important;
+  }
+  
+
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+ 
+  .select-items div,.select-selected {
+    color:firebrick;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+ 
+  .select-items {
+    position: absolute !important;
+    z-index: 100 !important;
+    background-color: white;
+    overflow: hidden;
     border-radius: 40px;
-    color: white;
-}
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.445);
+    
+  }
+
+
 
 #estabelecimentos{
-    width: 1000px;
+    width: 1001px;
     margin: auto;
     border: solid 2px rgb(116, 0, 0);
-    padding: 8px;
+    padding: 7px;
 }
 
 #estabelecimentos ul{

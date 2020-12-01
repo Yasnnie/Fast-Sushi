@@ -24,13 +24,17 @@
     <div id="outer">
         <div id="middle">
             <div id="inner">
-                <img src="../img/logo.png" alt="">
-                <h1>Faça seu Login</h1>
-                <input type="text" placeholder="E-mail">
-                <br>
-                <input type="password" name="" id="" placeholder="Senha">
-                <br>
-                <button>Entrar</button>
+                <form  method="POST" action="">
+                    <img src="../img/logo.png" alt="">
+                    <h1>Faça seu Login</h1>
+                    <input type="text" placeholder="E-mail">
+                    <br>
+                    <input type="password" name="" id="" placeholder="Senha">
+                    <br>
+                    <button type="submit">Entrar</button>
+            
+                </form>
+            
 
                 <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
 

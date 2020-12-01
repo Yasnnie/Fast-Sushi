@@ -18,18 +18,16 @@
     <header>
         <img src="../img/logo.png" alt="">
         <div class="procurar">
-            <form action="">
-                 <i class="fa fa-search" aria-hidden="true"></i>
-                 <input type="text" name="" id="spaceprocurar" placeholder="Buscar..." list="historico">
-                 <datalist id="historico"> 
-                     <option value="Chine Box"></option>
-                     <option value="Restaurante"></option>
-                 </datalist>
-            </form>
-     
-            
+
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" name="" id="spaceprocurar" placeholder="Buscar..." list="historico">
+            <datalist id="historico">
+                <option value="Chine Box"></option>
+                <option value="Restaurante"></option>
+            </datalist>
+
         </div>
-    
+
         <div class="barinfo">
             <a href="" class="user"> Usuário</a>
         </div>
@@ -40,13 +38,22 @@
     <div id="blocoEstabelecimentos">
         <div id="buscarRegiao">
             <label for="">Estado:</label>
-            <select name="" id="">
-                <option value="">Selecione</option>
-            </select>
+            <div class="custom-select">
+                <select name="" id="">
+                    <option value="">Selecione</option>
+                    <option value="">Opção 2</option>
+                    <option value="">Opção 3</option>
+                </select>
+            </div>
             <label for="">Cidade:</label>
-            <select name="" id="">
-                <option value="">Selecione</option>
-            </select>
+            <div class="custom-select">
+                <select name="" id="">
+                    <option value="">Selecione</option>
+                    <option value="">Opção 2</option>
+                    <option value="">Opção 3</option>
+                </select>
+            </div>
+
             <a href="">Buscar <i class="fa fa-search" aria-hidden="true"></i></a>
         </div>
 
@@ -70,7 +77,7 @@
                             </div>
 
                         </div>
-                        <p>O Chinatown tem como visão vir a ser a melhor operação de culinária 
+                        <p>O Chinatown tem como visão vir a ser a melhor operação de culinária
                             chinesa no Brasil, portanto, em 1995, iniciou o sistema de franquias</p>
 
                     </div>
@@ -110,7 +117,7 @@
         </div>
     </div>
 
-
+    <script src="../js/select.js"></script>
 </body>
 
 </html>
