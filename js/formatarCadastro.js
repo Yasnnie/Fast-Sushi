@@ -58,3 +58,37 @@ function formatarNumero() {
     }
     document.getElementById("numeroR").value = num;
 }
+
+function verificarEmail() {
+    let email = document.getElementById("email").value;
+    if(email.match(/^\S+@\w+\.\w{2,6}(\.\w{2})?/) != null) {
+        document.getElementById("veriEmail").setAttribute("class", "veriVerde");
+    } else {
+        document.getElementById("veriEmail").setAttribute("class", "veriVermelho");
+    }
+}
+
+function fortificacaoSenha() {
+    let senha = document.getElementById("senha").value;
+    
+    if(senha.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%!^&*]).{6,20}$/) != null) {
+        document.getElementById("veriSenha").setAttribute("class", "veriVerde");
+    } else if (senha.match(/^(?=.*[A-Z])(?=.*[a-z]).{6,20}$/)) {
+        document.getElementById("veriSenha").setAttribute("class", "veriAmarelo");
+    } else {
+        document.getElementById("veriSenha").setAttribute("class", "veriVermelho");
+    }
+    $("#exemplo").tooltip('show');
+}
+
+function confirmarSenha() {
+    let senhaConfirm = document.getElementById("confsenha").value;
+    let senha = document.getElementById("senha").value;
+    if(senhaConfirm == senha) {
+        document.getElementById("veriConfSenha").setAttribute("class", "veriVerde");
+        console.log("confirmar verde")
+    } else {
+        document.getElementById("veriConfSenha").setAttribute("class", "veriVermelho");
+        console.log("confirmar vermelho")
+    }
+}

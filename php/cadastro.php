@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/cadastro.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Cadastro - Fast Sushi</title>
 </head>
 
@@ -47,20 +47,27 @@
                     </li>
 
                     <li>
-                        <input type="text" name="" id="email" placeholder="E-mail" pattern="\S+@\w+\.\w{2,6}(\.\w{2})?">
+                        <input type="text" name="" id="email" placeholder="E-mail" pattern="\S+@\w+\.\w{2,6}(\.\w{2})?" oninput="verificarEmail()">
+                        <ul class="veriVermelho" id="veriEmail">
+                            <li></li>
+                        </ul>
                     </li>
+
+
                     <li>
-                        <input type="password" name="" id="senha" placeholder="Senha">
-                        <ul class="veri" id="veriSenha">
+                        <input type="password" name="" id="senha" placeholder="Senha" oninput="fortificacaoSenha()">
+                        <ul class="veriVermelho" id="veriSenha">
                             <li></li>
                         </ul>
                     </li>
                     <li>
-                        <input type="password" name="" id="confsenha" placeholder="Confirme a Senha">
-                        <ul class="veri" id="veriConfSenha">
+                        <input type="password" name="" id="confsenha" placeholder="Confirme a Senha" oninput="confirmarSenha()">
+                        <ul class="veriVermelho" id="veriConfSenha">
                             <li></li>
                         </ul>
                     </li>
+
+
                     <li>
                         <label for="">Estado:</label>
                         <select name="" id="labelEstados" onchange="getCidades()"></select>
@@ -68,7 +75,10 @@
                     <label for="">Cidade:</label>
                     <select name="" id="labelCidade"></select>
                     <li>
-                        <input type="text" name="" id="" placeholder="Rua"> 
+                    <input type="text" name="" id="bairro" placeholder="Bairro" style="width: 300px;">
+                    </li>
+                    <li>
+                        <input type="text" name="" id="" placeholder="Rua">
                         <input type="text" name="" id="numeroR" placeholder="Nº" oninput="formatarNumero()">
                     </li>
                     <li>

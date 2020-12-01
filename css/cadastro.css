@@ -136,16 +136,57 @@ label{
 }
 
 /*STYLE VERIFICAÇÃO DE SENHA*/
-.veri{
+.veriVermelho{
     
     position: relative;
     list-style: none;
     z-index: 30;
  }
 
- .veri li{
+ 
+
+ .veriVermelho li{
     position: absolute;
-    background-color: rgb(173, 0, 0);
+    background-color: #ff0000;
+    border-radius: 100px;
+    width: 10px;
+    top:-20px;
+    right: 20px;
+    height: 10px;
+    z-index: 30;
+ }
+
+ .veriVerde{
+    
+    position: relative;
+    list-style: none;
+    z-index: 30;
+ }
+
+
+ .veriVerde li{
+    position: absolute;
+    background-color: #15ff00;
+    border-radius: 100px;
+    width: 10px;
+    top:-20px;
+    right: 20px;
+    height: 10px;
+    z-index: 30;
+ }
+
+
+ .veriAmarelo{
+    
+    position: relative;
+    list-style: none;
+    z-index: 30;
+ }
+
+
+ .veriAmarelo li{
+    position: absolute;
+    background-color: #fbff00;
     border-radius: 100px;
     width: 10px;
     top:-20px;
