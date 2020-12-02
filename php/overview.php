@@ -39,7 +39,7 @@
         <div id="buscarRegiao">
             <div class="aux">
             <label for="">Estado:</label>
-            <div id="" class="custom-select">
+            <div id="" class="select-box">
                 <select name="" id="">
                     <option value="">Selecione</option>
                     <option value="">Opção 2</option>
@@ -47,7 +47,7 @@
                 </select>
             </div>
             <label for="">Cidade:</label>
-            <div class="custom-select">
+            <div class="select-box">
                 <select name="" id="">
                     <option value="">Selecione</option>
                     <option value="">Opção 2</option>
@@ -120,7 +120,6 @@
         </div>
     </div>
 
-    <script src="../js/select.js"></script>
 </body>
 
 </html>

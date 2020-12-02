@@ -116,88 +116,73 @@ header img{
     display: flex;
     margin: auto;
 }
-
+#buscarRegiao a{
+    margin-top: 4px !important;
+    margin-left: 7px;
+}
 #buscarRegiao .aux label{
     margin-right: 5px;
     margin-top: 5px;
 }
-.custom-select {
-    position: relative;
-    font-family: Arial;
-    width: 200px;
-    height: 32px;
-    margin-right: 15px;
-  }
-  
-  .custom-select select {
-    display: none;
-  }
-  
-  .select-selected {
-    background-color:  transparent;
-    padding: 5px;
-    height: 15px;
-    border-top: unset !important;
-    border-bottom: solid 2px white !important;
-    border-right: solid 1px white !important; 
-    border-left: solid 1px white !important;
-    border-radius: 100px;
-    color: white !important;
-  }
-  
 
-  .select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
-  }
-  
-  
-  .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-  }
-  
- 
-  .select-items div,.select-selected {
-    color:firebrick;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-  }
-  
- 
-  .select-items {
-    position: absolute !important;
-    z-index: 100 !important;
-    background-color: white;
-    overflow: hidden;
-    border-radius: 40px;
-    border: solid 1px grey;
-    border-top:none ;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
-  
-  .select-hide {
-    display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.445);
-    
-  }
+/*SELECT STYLE*/
 
 
+.select-box select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  width: 160px;
+  outline: 0;
+  box-shadow: none;
+  border: none !important;
+  background: none;
+}
 
+.select-box select::-ms-expand{
+  display: none;
+}
+
+.select-box{
+  position: relative;
+  display: flex;
+  background: transparent;
+  margin-right: 10px ;
+  margin-top: 4px;
+  width: 170px;
+  border-bottom: solid 2px white;
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+  border-top: unset;
+  padding: 7px;
+  overflow: hidden;
+  border-radius: 40px;
+  color: white;
+}
+
+select{
+  flex: 1;
+  cursor: pointer; 
+  color: white;
+}
+
+.select-box option{
+ color: black;
+}
+.select-box:after{
+  content: ' \25BC';
+  position: absolute;
+  top: 0px;
+  right: -1px;
+  color: firebrick;
+  background: white;
+  padding: 5px;
+  cursor: pointer !important;
+  pointer-events: none;
+}
+
+/*SEÇÃO DOS ESTABELECIMENTOS*/
 #estabelecimentos{
     width: 1001px;
     margin: auto;

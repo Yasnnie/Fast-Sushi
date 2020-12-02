@@ -70,12 +70,21 @@
 
 
                         <li>
-                            <label for="">Estado:</label>
-                            <div id="auxSelectEstado"></div>
+                            <div class="label-div">
+                                <label for="">Estado:</label>
+                                <div class="select-box">
+                                    <select name="" id="labelEstados" onchange="getCidades()"></select>
+                                </div>
+                            </div>
+                            <div class="label-div">
+                                <label for="">Cidade:</label>
+                                <div class="select-box">
+                                    <select name="" id="labelCidade"></select>
+                                </div>
+                            </div>
+
 
                         </li>
-                        <label for="">Cidade:</label>
-                        <select name="" id="labelCidade"></select>
 
 
                         <li>
