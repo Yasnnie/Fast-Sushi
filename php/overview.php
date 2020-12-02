@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/overview.css">
-    <title>Document</title>
+    <title>Restaurantes - Fast Sushi</title>
+    <link rel="shortcut icon" href="../img/logo.png">
 </head>
 
 <body>
@@ -85,6 +86,59 @@
 
                     </div>
 
+                    <div class="hours">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i><label for="">12h~21</label>
+                    </div>
+
+                </li>
+                <li>
+                    <img src="../img/login.png" alt="">
+                    <div class="descEstabelecimento">
+                        <a href="">Nome do estabelecimento</a>
+                        <h3>Endereço:Acre/ Acrelandia/ Rua da casa amarela Nº 1000</h3>
+
+                        <div class="phone">
+                            <i class="fa fa-phone , iconphone" aria-hidden="true"></i>
+                            <label for="">Telefone: (09)40028922 </label>
+                            <div class="avalicao">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+
+                        </div>
+                        <p>Descrição de estabelecimento</p>
+
+                    </div>
+                    <div class="hours">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i><label for="">12h~21</label>
+                    </div>
+
+                </li>
+
+                <li>
+                    <img src="../img/login.png" alt="">
+                    <div class="descEstabelecimento">
+                        <a href="">Nome do estabelecimento</a>
+                        <h3>Endereço:Acre/ Acrelandia/ Rua da casa amarela Nº 1000</h3>
+
+                        <div class="phone">
+                            <i class="fa fa-phone , iconphone" aria-hidden="true"></i>
+                            <label for="">Telefone: (09)40028922 </label>
+                            <div class="avalicao">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+
+                        </div>
+                        <p>Descrição de estabelecimento</p>
+
+                    </div>
                     <div class="hours">
                         <i class="fa fa-clock-o" aria-hidden="true"></i><label for="">12h~21</label>
                     </div>

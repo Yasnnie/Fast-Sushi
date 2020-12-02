@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#box{
+    display: flex;
+    height: 10000px;
+    
+}
+
+#box .container{
+    padding: 20px;
+    width: 250px;
+    display: block;
+    text-align: center;
+    
+}
+
+#box .container:nth-child(1){
+    background: url(../img/login.png);
+    background-size: 450px 1000px;
+
+}
+
+#box .container img{
+
+    height: 200px !important;
+    width: 200px;
+    border: solid 3px white;
+    border-radius: 100%;
+}
+
+#box .container:nth-child(1) button{
+    background: white;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 40px;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 15px;
+    color:rgb(116, 0, 0);
+    text-transform: uppercase;
+     
+}
+
+button:focus,input:focus,textarea{
+    outline: 0;
+}
+
+#box .container:nth-child(1) button:hover{
+    background: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+#box .container:nth-child(1) a{
+    color:rgb(116, 0, 0);
+    text-decoration: none;
+}
