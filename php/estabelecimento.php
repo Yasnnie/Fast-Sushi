@@ -41,6 +41,7 @@
                 <h5>Horário de Funcionamento</h5>
                 <label for=""> Início:</label>
                 <input type="time" name="" id="">
+                <br>
                 <label for=""> Final:</label>
                 <input type="time" name="" id="">
 
@@ -52,11 +53,11 @@
         </div>
 
 
-        <div container>
+        <div class="container2">
             <div class="cardapio">
                 <input type="file" name="" id="">
                 <input type="text" placeholder="Nome">
-                <textarea name="" id="" maxlength="180" placeholder="Descrição"></textarea>
+                <textarea name="" id="" maxlength="200" placeholder="Descrição"></textarea>
                 <button>Adicionar ao Cardapio</button>
             </div>
 

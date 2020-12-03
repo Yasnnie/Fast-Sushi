@@ -6,6 +6,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: whitesmoke;
 }
 
 #box{
@@ -19,13 +21,11 @@ body{
     width: 250px;
     display: block;
     text-align: center;
-    
-}
-
-#box .container:nth-child(1){
+    height: 100%;
     background: url(../img/login.png);
     background-size: 450px 1000px;
-
+    
+    
 }
 
 #box .container img{
@@ -36,7 +36,7 @@ body{
     border-radius: 100%;
 }
 
-#box .container:nth-child(1) button{
+#box .container button {
     background: white;
     width: 200px;
     height: 30px;
@@ -54,12 +54,12 @@ button:focus,input:focus,textarea{
     outline: 0;
 }
 
-#box .container:nth-child(1) button:hover{
+#box .container button:hover, .cardapio button:hover{
     background: rgb(226, 226, 226);
     cursor: pointer;
 }
 
-#box .container:nth-child(1) a{
+#box .container a{
     color:rgb(116, 0, 0);
     text-decoration: none;
 }
@@ -69,9 +69,11 @@ button:focus,input:focus,textarea{
 .editar-perfil {
     display: block;
     background: rgb(117, 0, 0);
-    margin: auto;
     margin-top: 10px !important;
+    margin: auto;
     border-radius: 30px;
+    width: 240px;
+    padding: 2px;
     
 }
 
@@ -121,6 +123,7 @@ button:focus,input:focus,textarea{
     padding: 4px;
 }
 
+
 .editar-perfil textarea{
     margin-top: 20px;
     margin-right: auto;
@@ -134,13 +137,78 @@ button:focus,input:focus,textarea{
     border-right: solid 1px white;
     border-left: solid 1px white;
     border-top: none;
-    border-radius: 40px;
-    height: 160px;
-    width: 200px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    height: 120px;
+    width: 180px;
     padding: 15px;
     resize: none;
+}
 
-    }
 
 
-    
+textarea::-webkit-scrollbar-track {
+    background-color: rgb(151, 0, 0);
+}
+textarea::-webkit-scrollbar {
+    width: 4px;
+    background: rgb(151, 0, 0);
+}
+textarea::-webkit-scrollbar-thumb {
+    background: #f40000;
+}
+
+.container2{
+    width: 100%;  
+}
+.cardapio{
+    display: inline-flex;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background: rgb(116, 0, 0);
+}
+
+.cardapio input[type="text"]{
+    background: transparent;
+    border-bottom: solid 2px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    border-top: none;
+    height: 20px;
+    padding: 10px;
+    border-radius: 40px;
+    color: white;
+}
+
+.cardapio textarea{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 13px;
+    background: transparent;
+    border-bottom: solid 2px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    border-top: none;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    height: 20px !important;
+    width: 300px !important;
+    padding: 10px !important;
+    resize: none;
+}
+.container2 button{
+    background: white;
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    color:rgb(116, 0, 0);
+
+}
+
+.cardapio::-webkit-file-upload-button {
+    visibility: hidden;
+  }
