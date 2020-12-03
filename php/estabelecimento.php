@@ -23,81 +23,91 @@
     <div id="box">
         <div class="container">
             <img src="../img/teste.jpg" alt="">
-            
-
-                
-                <button><a href="">Histórico de Pedidos</a></button> 
-                <button >Editar Perfil</button>
-                <button>Sair</button>
 
 
-            <div>
-                <ul>
-                    
-                    <li><input type="text" placeholder="Nome"></li>
-                    <li><input type="text" placeholder="Telefone"></li>
-                    <li><input type="file"></li>
-                    <li>
-                        <h5>Horário de Funcionamento</h5>
-                        <label for=""> Início:</label>
-                        <input type="time" name="" id="">
-                        <label for=""> Final:</label>
-                        <input type="time" name="" id="">
-                    </li>
-                    <li>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Descrição"></textarea>
-                    </li>
-                </ul>
+
+            <button><a href="">Histórico de Pedidos</a></button>
+            <button>Editar Perfil</button>
+            <button>Sair</button>
+
+
+            <div class="editar-perfil">
+
+
+                <input type="text" placeholder="Nome">
+                <br>
+                <input type="text" placeholder="Telefone">
+                <br>
+                <h5>Horário de Funcionamento</h5>
+                <label for=""> Início:</label>
+                <input type="time" name="" id="">
+                <label for=""> Final:</label>
+                <input type="time" name="" id="">
+
+                <br>
+                <textarea name="" id="" maxlength="180" placeholder="Descrição"></textarea>
+
+
             </div>
         </div>
 
 
         <div container>
-            <table>
-                <tr>
-                    <td>
-                        <h1>PED 001</h1>
-                        <h3>Yasmin Carvalho</h3>
+            <div class="cardapio">
+                <input type="file" name="" id="">
+                <input type="text" placeholder="Nome">
+                <textarea name="" id="" maxlength="180" placeholder="Descrição"></textarea>
+                <button>Adicionar ao Cardapio</button>
+            </div>
 
-                        <a href="">Entregar</a>
-                    </td>
-                    <td>
-                        <h1>PED 001</h1>
-                        <h3>Yasmin Carvalho</h3>
+            <div class="pedido">
+                <table>
+                    <tr>
+                        <td>
+                            <h1>PED 001</h1>
+                            <h3>Yasmin Carvalho</h3>
 
-                        <a href="">Entregar</a>
-                    </td>
-                    <td>
-                        <h1>PED 001</h1>
-                        <h3>Yasmin Carvalho</h3>
+                            <a href="">Entregar</a>
+                        </td>
+                        <td>
+                            <h1>PED 001</h1>
+                            <h3>Yasmin Carvalho</h3>
 
-                        <a href="">Entregar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h1>PED 001</h1>
-                        <h3>Yasmin Carvalho</h3>
+                            <a href="">Entregar</a>
+                        </td>
+                        <td>
+                            <h1>PED 001</h1>
+                            <h3>Yasmin Carvalho</h3>
 
-                        <a href="">Entregar</a>
-                    </td>
-                    <td>
-                        <h1>PED 001</h1>
-                        <h3>Yasmin Carvalho</h3>
+                            <a href="">Entregar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1>PED 001</h1>
+                            <h3>Yasmin Carvalho</h3>
 
-                        <a href="">Entregar</a>
-                    </td>
-                    <td>
-                        <h1>PED 001</h1>
-                        <h3>Yasmin Carvalho</h3>
+                            <a href="">Entregar</a>
+                        </td>
+                        <td>
+                            <h1>PED 001</h1>
+                            <h3>Yasmin Carvalho</h3>
 
-                        <a href="">Entregar</a>
-                    </td>
+                            <a href="">Entregar</a>
+                        </td>
+                        <td>
+                            <h1>PED 001</h1>
+                            <h3>Yasmin Carvalho</h3>
 
-                </tr>
+                            <a href="">Entregar</a>
+                        </td>
+
+                    </tr>
 
 
-            </table>
+                </table>
+            </div>
+
         </div>
     </div>
 

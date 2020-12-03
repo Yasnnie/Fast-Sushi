@@ -1,4 +1,8 @@
+html{
+    height: 100%;
+}
 body{
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -6,12 +10,12 @@ body{
 
 #box{
     display: flex;
-    height: 10000px;
+    height: 100%;
     
 }
 
 #box .container{
-    padding: 20px;
+    padding: 10px;
     width: 250px;
     display: block;
     text-align: center;
@@ -59,3 +63,84 @@ button:focus,input:focus,textarea{
     color:rgb(116, 0, 0);
     text-decoration: none;
 }
+
+
+
+.editar-perfil {
+    display: block;
+    background: rgb(117, 0, 0);
+    margin: auto;
+    margin-top: 10px !important;
+    border-radius: 30px;
+    
+}
+
+.editar-perfil input[type="text"]::-webkit-input-placeholder , textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 12px;
+}
+
+.editar-perfil input[type="text"]{
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 25px;
+    width: 180px;
+    background: unset;
+    border-bottom: solid 2px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    border-top: unset;
+    padding: 7px;
+    border-radius: 40px;
+    color: white;
+}
+
+.editar-perfil h5{
+    color: white; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.editar-perfil label{
+    color: white;
+    font-size: 13px;
+}
+
+.editar-perfil input[type="time"]{
+    color: white;
+    background: transparent;
+    border-bottom: solid 2px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    border-top: unset;
+    border-radius: 40px;
+    padding: 4px;
+}
+
+.editar-perfil textarea{
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 13px;
+    background: transparent;
+    border-bottom: solid 2px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    border-top: none;
+    border-radius: 40px;
+    height: 160px;
+    width: 200px;
+    padding: 15px;
+    resize: none;
+
+    }
+
+
+    
