@@ -17,15 +17,14 @@
 </head>
 
 <body>
-
-    <!-- COLOCAR UM ESPAÇO PARA ADICIOAR COISAS AO CARDÁPIO -->
+    <!--Cria o script dos botões-->
 
     <div id="box">
         <div class="container">
             <img src="../img/teste.jpg" alt="">
-            <button><a href="">Histórico de Pedidos</a></button>
-            <button>Editar Perfil</button>
-            <button>Cardápio</button>
+            <button name="historico" onclick="showHistorico()">Histórico de Pedidos</button>
+            <button name="perfil" onclick="editarPerfil()">Editar Perfil</button>
+            <button name="cardapio" onclick="editarCardapio()">Cardápio</button>
             <button>Sair</button>
 
         </div>
@@ -74,6 +73,51 @@
 
                 </tr>
 
+                <tr>
+                    <td>
+                        <h1>PED 001</h1>
+                        <h3>Yasmin Carvalho</h3>
+
+                        <a href="">Entregar</a>
+                    </td>
+                    <td>
+                        <h1>PED 001</h1>
+                        <h3>Yasmin Carvalho</h3>
+
+                        <a href="">Entregar</a>
+                    </td>
+                    <td>
+                        <h1>PED 001</h1>
+                        <h3>Yasmin Carvalho</h3>
+
+                        <a href="">Entregar</a>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <h1>PED 001</h1>
+                        <h3>Yasmin Carvalho</h3>
+
+                        <a href="">Entregar</a>
+                    </td>
+                    <td>
+                        <h1>PED 001</h1>
+                        <h3>Yasmin Carvalho</h3>
+
+                        <a href="">Entregar</a>
+                    </td>
+                    <td>
+                        <h1>PED 001</h1>
+                        <h3>Yasmin Carvalho</h3>
+
+                        <a href="">Entregar</a>
+                    </td>
+
+                </tr>
+
+
 
             </table>
         </div>
@@ -81,7 +125,8 @@
 
     </div>
 
-    <div class="cardapio">
+    <div class="cardapio" id="cardapio">
+    <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
         <div class="categoria">
             <form action="">
                 <h1>Criar Nova Categoria:</h1>
@@ -120,11 +165,12 @@
 
     </div>
 
-    <div class="editar-perfil">
+    <div class="editar-perfil" id="perfil">
+    <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
         <form action="" method="post">
             <label for="">Nome do Prato:</label>
             <br>
-            <input type="text" >
+            <input type="text">
             <br>
             <label for="">Telefone:</label>
             <br>
@@ -149,11 +195,146 @@
 
     </div>
 
-    <div class="historico-de-pedidos">
+    <div class="historico-de-pedidos" id="historico">
 
+        <label for="">Procurar Pedido:</label>
+        <div class="procurar">
+
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" name="" id="spaceprocurar" placeholder="Buscar..." list="historico">
+            <datalist id="historico">
+                <option value="Chine Box"></option>
+                <option value="Restaurante"></option>
+            </datalist>
+
+        </div>
+        <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
+        <table>
+            <tr>
+                <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
+                <td>
+                    <!-- Data do pedido quando foi entregue-->
+                    <h4>Data:22/01/2000</h4>
+                </td>
+                <td>
+                    <!-- Nome Cliente, CPF e Pedido-->
+                    <h4>Yasmin Carvalho</h4>
+                    <p>CPF</p>
+                    <p>Pediu: Temaki de camarão</p>
+                </td>
+                <td>
+                    <!-- Método de pagamento -->
+                    <h4>Cartão</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
+                <td>
+                    <!-- Data do pedido quando foi entregue-->
+                    <h4>Data:22/01/2000</h4>
+                </td>
+                <td>
+                    <!-- Nome Cliente, CPF e Pedido-->
+                    <h4>Yasmin Carvalho</h4>
+                    <p>CPF</p>
+                    <p>Pediu: Temaki de camarão</p>
+                </td>
+                <td>
+                    <!-- Método de pagamento -->
+                    <h4>Cartão</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
+                <td>
+                    <!-- Data do pedido quando foi entregue-->
+                    <h4>Data:22/01/2000</h4>
+                </td>
+                <td>
+                    <!-- Nome Cliente, CPF e Pedido-->
+                    <h4>Yasmin Carvalho</h4>
+                    <p>CPF</p>
+                    <p>Pediu: Temaki de camarão</p>
+                </td>
+                <td>
+                    <!-- Método de pagamento -->
+                    <h4>Cartão</h4>
+                </td>
+            </tr>
+            <tr>
+                <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
+                <td>
+                    <!-- Data do pedido quando foi entregue-->
+                    <h4>Data:22/01/2000</h4>
+                </td>
+                <td>
+                    <!-- Nome Cliente, CPF e Pedido-->
+                    <h4>Yasmin Carvalho</h4>
+                    <p>CPF</p>
+                    <p>Pediu: Temaki de camarão</p>
+                </td>
+                <td>
+                    <!-- Método de pagamento -->
+                    <h4>Cartão</h4>
+                </td>
+            </tr>
+            <tr>
+                <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
+                <td>
+                    <!-- Data do pedido quando foi entregue-->
+                    <h4>Data:22/01/2000</h4>
+                </td>
+                <td>
+                    <!-- Nome Cliente, CPF e Pedido-->
+                    <h4>Yasmin Carvalho</h4>
+                    <p>CPF</p>
+                    <p>Pediu: Temaki de camarão</p>
+                </td>
+                <td>
+                    <!-- Método de pagamento -->
+                    <h4>Cartão</h4>
+                </td>
+            </tr>
+            <tr>
+                <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
+                <td>
+                    <!-- Data do pedido quando foi entregue-->
+                    <h4>Data:22/01/2000</h4>
+                </td>
+                <td>
+                    <!-- Nome Cliente, CPF e Pedido-->
+                    <h4>Yasmin Carvalho</h4>
+                    <p>CPF</p>
+                    <p>Pediu: Temaki de camarão</p>
+                </td>
+                <td>
+                    <!-- Método de pagamento -->
+                    <h4>Cartão</h4>
+                </td>
+            </tr>
+            <tr>
+                <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
+                <td>
+                    <!-- Data do pedido quando foi entregue-->
+                    <h4>Data:22/01/2000</h4>
+                </td>
+                <td>
+                    <!-- Nome Cliente, CPF e Pedido-->
+                    <h4>Yasmin Carvalho</h4>
+                    <p>CPF</p>
+                    <p>Pediu: Temaki de camarão</p>
+                </td>
+                <td>
+                    <!-- Método de pagamento -->
+                    <h4>Cartão</h4>
+                </td>
+            </tr>
+        </table>
     </div>
 
-
+    <script src="../js/estabelecimento.js"></script>
 
 </body>
 
