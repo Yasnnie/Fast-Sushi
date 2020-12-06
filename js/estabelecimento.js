@@ -16,9 +16,16 @@ function editarPerfil(){
     document.getElementById('box').classList.add('fundo');
 }
 
+function abrirPedido(){
+    document.getElementById('pedidodetalhado').classList.add('visivel');
+    document.getElementById('box').classList.add('fundo');
+}
+
 function fecharAba(){
+    document.getElementById('pedidodetalhado').classList.remove('visivel');
     document.getElementById('historico').classList.remove('visivel');
     document.getElementById('cardapio').classList.remove('visivel');
     document.getElementById('perfil').classList.remove('visivel');
     document.getElementById('box').classList.remove('fundo');
 }
+

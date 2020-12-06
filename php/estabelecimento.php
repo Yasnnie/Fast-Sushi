@@ -20,7 +20,7 @@
     <!--Cria o script dos botões-->
 
     <div id="box">
-        <div class="container">
+        <div class="container" id="container">
             <img src="../img/teste.jpg" alt="">
             <button name="historico" onclick="showHistorico()">Histórico de Pedidos</button>
             <button name="perfil" onclick="editarPerfil()">Editar Perfil</button>
@@ -32,19 +32,20 @@
         <div class="pedido">
             <table>
                 <tr>
-                    <td>
+                    <!-- ADICIONAR A FUNÇÃO DE ABRIR PEDIDO-->
+                    <td onclick="abrirPedido()">
                         <h1>PED 001</h1>
                         <h3>Yasmin Carvalho</h3>
 
                         <a href="">Entregar</a>
                     </td>
-                    <td>
+                    <td onclick="abrirPedido()">
                         <h1>PED 001</h1>
                         <h3>Yasmin Carvalho</h3>
 
                         <a href="">Entregar</a>
                     </td>
-                    <td>
+                    <td onclick="abrirPedido()">
                         <h1>PED 001</h1>
                         <h3>Yasmin Carvalho</h3>
 
@@ -52,19 +53,19 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td onclick="abrirPedido()">
                         <h1>PED 001</h1>
                         <h3>Yasmin Carvalho</h3>
 
                         <a href="">Entregar</a>
                     </td>
-                    <td>
+                    <td onclick="abrirPedido()">
                         <h1>PED 001</h1>
                         <h3>Yasmin Carvalho</h3>
 
                         <a href="">Entregar</a>
                     </td>
-                    <td>
+                    <td onclick="abrirPedido()">
                         <h1>PED 001</h1>
                         <h3>Yasmin Carvalho</h3>
 
@@ -75,7 +76,7 @@
 
                 <tr>
                     <td>
-                        <h1>PED 001</h1>
+                        <h1>PED 002</h1>
                         <h3>Yasmin Carvalho</h3>
 
                         <a href="">Entregar</a>
@@ -125,8 +126,62 @@
 
     </div>
 
+    <div class="pedido-detalhado" id="pedidodetalhado">
+        <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
+        <div class="nome-cliente">
+            <h3>Nome:Yasmin Carvalho</h3>
+        </div>
+        <hr>
+        <div class="pedido-cliente">
+            <h4>Pedido:</h4>
+            <table>
+                <tr>
+                    <th>Qtd.</th>
+                    <th>Nome do Produto</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>temaki</td>
+                    <td>30,00</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Barca</td>
+                    <td>70,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Yakisoba</td>
+                    <td>40,00</td>
+                </tr>
+            </table>
+            <h4>Valor total: 140,00</h4>
+        </div>
+        <hr>
+        <div class="descricao-cliente">
+            <h4>Descrição:</h4>
+            <p>toda a descrição de informações extra</p>
+        </div>
+        <hr>
+        <div class="pagamento-cliente">
+            <h4>Metodo de pagamento:</h4>
+            <h3>Cartão</h3>
+        </div>
+        <hr>
+        <div class="endereco-cliente">
+            <h4>Endereço:</h4>
+            <p>Endereço: pipipi popopo pipi popop</p>
+        </div>
+
+        <button>Entregar</button>
+    </div>
+
+
+    <!-- FILE IMAGE NO CARDAPIO:-->
+
     <div class="cardapio" id="cardapio">
-    <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
+        <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
         <div class="categoria">
             <form action="">
                 <h1>Criar Nova Categoria:</h1>
@@ -144,9 +199,15 @@
                 <!--<input type="file" name="" id="">-->
                 <label for="">Nome do Prato:</label>
                 <br>
-                <input type="text" placeholder="">
+                <input type="text" placeholder=" Nome do Prato">
                 <br>
+                <label for=""> Foto:</label>
+                <input type="file" id="actual-btn" class="file-close">
+                <label for="actual-btn" class="file">Escolha uma Foto</label>
+                <span id="file-chosen">Nenhum Arquivo Selecionado</span>
 
+                <br>
+                <br>
                 <label for="">Selecione uma categoria:</label>
                 <div class="select-box">
                     <select name="" id="">
@@ -165,12 +226,13 @@
 
     </div>
 
+
     <div class="editar-perfil" id="perfil">
-    <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
+        <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
         <form action="" method="post">
-            <label for="">Nome do Prato:</label>
+            <label for="">Nome:</label>
             <br>
-            <input type="text">
+            <input type="text" placeholder="Nome">
             <br>
             <label for="">Telefone:</label>
             <br>
@@ -196,7 +258,7 @@
     </div>
 
     <div class="historico-de-pedidos" id="historico">
-
+        <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
         <label for="">Procurar Pedido:</label>
         <div class="procurar">
 
@@ -208,7 +270,7 @@
             </datalist>
 
         </div>
-        <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
+
         <table>
             <tr>
                 <!-- NO MÁXIMO 3 COLUNAS UMAS COM A DATA E OUTRA COM AS INFORMAÇÕES-->
@@ -333,7 +395,7 @@
             </tr>
         </table>
     </div>
-
+    <script src="../js/file.js"></script>
     <script src="../js/estabelecimento.js"></script>
 
 </body>
