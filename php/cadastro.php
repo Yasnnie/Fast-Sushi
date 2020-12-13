@@ -1,9 +1,33 @@
 <?php
-//include("conexao.php");
+include("conexao.php");
 
 
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+$estado = $_POST['estado'];
+$cidade = $_POST['cidade'];
 
+$bairro = $_POST['bairro'];
+$rua = $_POST['rua'];
+$numero = $_POST['numero'];
+$telefone = $_POST['telefone'];
 
+$insercao = "";
+
+$answer = $_POST['tipoDeConta'];
+if ($answer == "pf") {
+    echo 'pessoa fisica';
+    $sobrenome = $_POST['sobrenome'];
+    $cpf = $_POST['cpf'];
+    $insercao = "INSERT INTO pessoa_fisica(nome, sobrenome, cpf, email, senha, estado, cidade, bairro, rua, numero, telefone) VALUE('{$nome}', '{$sobrenome}', '{$cpf}', '{$email}', md5('{$senha}'), '{$estado}', '{$cidade}', '{$bairro}', '{$rua}', '{$numero}', '{$telefone}')";
+} else if ($answer == "es") {
+    echo 'estabelecimento';
+    $cnpj = 'cnpj';
+    $insercao = "INSERT INTO estabelecimento(nome, cnpj, email, senha, estado, cidade, bairro, rua, numero, telefone) VALUE('{$nome}', '{$sobrenome}', '{$cpf}', '{$email}', md5('{$senha}'), '{$estado}', '{$cidade}', '{$bairro}', '{$rua}', '{$numero}', '{$telefone}')";
+}
+
+$query = mysqli_query($conexao, $insercao);
 
 ?>
 
@@ -31,11 +55,11 @@
                     <ul>
                         <li>
                             <label for="option1" class="containerRadio" onchange="radioVerify()">Pessoa Física:
-                                <input type="radio" name="tipoDeConta" id="option1">
+                                <input type="radio" name="tipoDeConta" id="option1" value="pf">
                                 <span class="circle"></span>
                             </label>
                             <label for="option2" class="containerRadio" onchange="radioVerify()">Estabelecimento:
-                                <input type="radio" name="tipoDeConta" id="option2">
+                                <input type="radio" name="tipoDeConta" id="option2" value="es">
                                 <span class="circle"></span>
                             </label>
 
@@ -49,7 +73,7 @@
                         </li>
 
                         <li>
-                            <input type="text" name="" id="email" placeholder="E-mail" pattern="\S+@\w+\.\w{2,6}(\.\w{2})?" oninput="verificarEmail()">
+                            <input type="text" name="email" id="email" placeholder="E-mail" pattern="\S+@\w+\.\w{2,6}(\.\w{2})?" oninput="verificarEmail()">
                             <ul class="veriVermelho" id="veriEmail">
                                 <li></li>
                             </ul>
@@ -57,7 +81,7 @@
 
 
                         <li>
-                            <input type="password" name="" id="senha" placeholder="Senha" oninput="fortificacaoSenha()">
+                            <input type="password" name="senha" id="senha" placeholder="Senha" oninput="fortificacaoSenha()">
                             <ul class="veriVermelho" id="veriSenha">
                                 <li></li>
                             </ul>
@@ -74,13 +98,13 @@
                             <div class="label-div">
                                 <label for="">Estado:</label>
                                 <div class="select-box">
-                                    <select name="" id="labelEstados" onchange="getCidades()"></select>
+                                    <select name="estado" id="labelEstados" onchange="getCidades()"></select>
                                 </div>
                             </div>
                             <div class="label-div">
                                 <label for="">Cidade:</label>
                                 <div class="select-box">
-                                    <select name="" id="labelCidade"></select>
+                                    <select name="cidade" id="labelCidade"></select>
                                 </div>
                             </div>
 
@@ -89,15 +113,15 @@
 
 
                         <li>
-                            <input type="text" name="" id="bairro" placeholder="Bairro" style="width: 300px;">
+                            <input type="text" name="bairro" id="bairro" placeholder="Bairro" style="width: 300px;">
                         </li>
                         <li>
-                            <input type="text" name="" id="" placeholder="Rua">
-                            <input type="text" name="" id="numeroR" placeholder="Nº" oninput="formatarNumero()">
+                            <input type="text" name="rua" id="" placeholder="Rua">
+                            <input type="text" name="numero" id="numeroR" placeholder="Nº" oninput="formatarNumero()">
                         </li>
                         <li>
                             <label for="">Telefone:</label>
-                            <input id="telefone" type="text" name="" id="" placeholder="(__)____________" oninput="ajeitarTelefone()">
+                            <input id="telefone" type="text" name="telefone" id="" placeholder="(__)____________" oninput="ajeitarTelefone()">
                         </li>
 
                         <li><button type="submit">Cadastrar</button></li>
@@ -107,7 +131,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/select.js"></script>
     <script src="../js/pluginIBGE.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../js/formatarCadastro.js"></script>

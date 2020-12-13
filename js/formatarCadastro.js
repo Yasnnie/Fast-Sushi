@@ -1,27 +1,24 @@
 function radioVerify() {
     if($("#option1").prop("checked")) {
-        let value1 = `<input type="text" name="" id="nome" placeholder="Nome">
-        <input type="text" name="" id="sobrenome" placeholder="Sobrenome">`
+        let value1 = 
+        `<input type="text" name="nome" id="nome" placeholder="Nome">
+        <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">`
         document.getElementById('tipoArea').innerHTML = value1;
-
-        let value2 = `<input type="text" name="" placeholder="CPF" id = "cpf">`;
+        let value2 = `<input type="text" name="cpf" placeholder="CPF" id = "cpf">`;
         document.getElementById('CPForCNPJ').innerHTML = value2;
         
         document.getElementById('cpf').style.width = "330px";
 
     } else if($("#option2").prop("checked")) {
-        let value = `<input type="text" name="" id="nome" placeholder="Nome">`
+        let value = `<input type="text" name="nome" id="nome" placeholder="Nome">`
         document.getElementById('tipoArea').innerHTML = value;
         document.getElementById('nome').style.width = "300px";
         
         
-        let value2 = `<input type="text" name="" placeholder="CNPJ" id = "cnpj">`;
+        let value2 = `<input type="text" name="cnpj" placeholder="CNPJ" id = "cnpj">`;
         document.getElementById('CPForCNPJ').innerHTML = value2;
 
         document.getElementById('cnpj').style.width = "330px";
-        
-        
-    
     } else {
         let value = `<h3>Selecione o tipo de conta</h3>`;
         document.getElementById('tipoArea').innerHTML = value;
