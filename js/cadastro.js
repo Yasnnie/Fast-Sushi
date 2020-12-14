@@ -1,20 +1,20 @@
 function radioVerify() {
-    if($("#option1").prop("checked")) {
-        let value1 = 
-        `<input type="text" id="nome" name="nome" placeholder="Nome">
+    if ($("#option1").prop("checked")) {
+        let value1 =
+            `<input type="text" id="nome" name="nome" placeholder="Nome">
         <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">`
         document.getElementById('tipoArea').innerHTML = value1;
         let value2 = `<input type="text" name="cpf" placeholder="CPF" id = "cpf">`;
         document.getElementById('CPForCNPJ').innerHTML = value2;
-        
+
         document.getElementById('cpf').style.width = "330px";
 
-    } else if($("#option2").prop("checked")) {
+    } else if ($("#option2").prop("checked")) {
         let value = `<input type="text" name="nome" id="nome" placeholder="Nome">`
         document.getElementById('tipoArea').innerHTML = value;
         document.getElementById('nome').style.width = "300px";
-        
-        
+
+
         let value2 = `<input type="text" name="cnpj" placeholder="CNPJ" id = "cnpj">`;
         document.getElementById('CPForCNPJ').innerHTML = value2;
 
@@ -24,7 +24,7 @@ function radioVerify() {
         document.getElementById('tipoArea').innerHTML = value;
 
         let value2 = `<br>`;
-        document.getElementById('CPForCNPJ').innerHTML = value2; 
+        document.getElementById('CPForCNPJ').innerHTML = value2;
     }
 }
 
@@ -58,7 +58,7 @@ function formatarNumero() {
 
 function verificarEmail() {
     let email = document.getElementById("email").value;
-    if(email.match(/^\S+@\w+\.\w{2,6}(\.\w{2})?/) != null) {
+    if (email.match(/^\S+@\w+\.\w{2,6}(\.\w{2})?/) != null) {
         document.getElementById("veriEmail").setAttribute("class", "veriVerde");
     } else {
         document.getElementById("veriEmail").setAttribute("class", "veriVermelho");
@@ -67,8 +67,8 @@ function verificarEmail() {
 
 function fortificacaoSenha() {
     let senha = document.getElementById("senha").value;
-    
-    if(senha.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%!^&*]).{6,20}$/) != null) {
+
+    if (senha.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%!^&*]).{6,20}$/) != null) {
         document.getElementById("veriSenha").setAttribute("class", "veriVerde");
     } else if (senha.match(/^(?=.*[A-Z])(?=.*[a-z]).{6,20}$/)) {
         document.getElementById("veriSenha").setAttribute("class", "veriAmarelo");
@@ -81,7 +81,7 @@ function fortificacaoSenha() {
 function confirmarSenha() {
     let senhaConfirm = document.getElementById("confsenha").value;
     let senha = document.getElementById("senha").value;
-    if(senhaConfirm == senha) {
+    if (senhaConfirm == senha) {
         document.getElementById("veriConfSenha").setAttribute("class", "veriVerde");
         console.log("confirmar verde")
     } else {
@@ -89,3 +89,37 @@ function confirmarSenha() {
         console.log("confirmar vermelho")
     }
 }
+
+$(window).on("load", function(){
+    var query = location.search.slice(1);
+    var partes = query.split('&');
+    var data = {};
+    partes.forEach(function (parte) {
+        var chaveValor = parte.split('=');
+        var chave = chaveValor[0];
+        var valor = chaveValor[1];
+        data[chave] = valor;
+    });
+    if(data['id'] == 69) {
+        Swal.fire({
+            title: 'Usuário Cadastrado!',
+            text: 'Usuário cadastrado com sucesso no nosso sistema',
+            icon: 'success',
+            confirmButtonText: 'OK'
+          })
+    } else if(data['id'] == 79) {
+        Swal.fire({
+            title: 'Estabelecimento Cadastrado!',
+            text: 'Estabelecimento cadastrado com sucesso no nosso sistema',
+            icon: 'success',
+            confirmButtonText: 'OK'
+          });
+    } else if(data['id'] == 401) {
+        Swal.fire({
+            title: 'Erro no cadastro',
+            text: 'Não foi possível realizar o cadastro, erro no banco de dados. Favor, consultar os administradores do fastSushi',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
+    }
+});

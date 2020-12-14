@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
     <link rel="shortcut icon" href="../img/logo.png">
     <title>Cadastro - Fast Sushi</title>
 </head>
@@ -17,7 +18,7 @@
         <div id="middle">
             <div id="inner">
                 <img src="../img/logo.png" alt="">
-                <form method="POST" action="cadastroConfirm.php">
+                <form method="POST" action="../php/cadastroConfirm.php">
                     <ul>
                         <li>
                             <label for="option1" class="containerRadio" onchange="radioVerify()">Pessoa Física:
@@ -39,7 +40,8 @@
                         </li>
 
                         <li>
-                            <input type="text" name="email" id="email" placeholder="E-mail" pattern="\S+@\w+\.\w{2,6}(\.\w{2})?" oninput="verificarEmail()">
+                            <input type="text" name="email" id="email" placeholder="E-mail"
+                                pattern="\S+@\w+\.\w{2,6}(\.\w{2})?" oninput="verificarEmail()">
                             <ul class="veriVermelho" id="veriEmail">
                                 <li></li>
                             </ul>
@@ -47,13 +49,15 @@
 
 
                         <li>
-                            <input type="password" name="senha" id="senha" placeholder="Senha" oninput="fortificacaoSenha()">
+                            <input type="password" name="senha" id="senha" placeholder="Senha"
+                                oninput="fortificacaoSenha()">
                             <ul class="veriVermelho" id="veriSenha">
                                 <li></li>
                             </ul>
                         </li>
                         <li>
-                            <input type="password" name="" id="confsenha" placeholder="Confirme a Senha" oninput="confirmarSenha()">
+                            <input type="password" name="" id="confsenha" placeholder="Confirme a Senha"
+                                oninput="confirmarSenha()">
                             <ul class="veriVermelho" id="veriConfSenha">
                                 <li></li>
                             </ul>
@@ -87,10 +91,11 @@
                         </li>
                         <li>
                             <label for="">Telefone:</label>
-                            <input id="telefone" type="text" name="telefone" id="" placeholder="(__)____________" oninput="ajeitarTelefone()">
+                            <input id="telefone" type="text" name="telefone" id="" placeholder="(__)____________"
+                                oninput="ajeitarTelefone()">
                         </li>
 
-                        <li><button type="submit">Cadastrar</button></li>
+                        <li><button id="sub" type="submit">Cadastrar</button></li>
                     </ul>
                 </form>
 
@@ -99,7 +104,8 @@
     </div>
     <script src="../js/pluginIBGE.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../js/CadastroFormatar.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>
