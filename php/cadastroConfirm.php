@@ -2,7 +2,6 @@
 include("conexao.php");
 
 
-
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -14,19 +13,6 @@ $rua = $_POST['rua'];
 $numero = $_POST['numero'];
 $telefone = $_POST['telefone'];
 
-/*
-$nome = 'nome';
-$email = 'email';
-$senha ='senha';
-$estado = 'estado';
-$cidade = 'cidade';
-
-$bairro = 'bairro';
-$rua = 'rua';
-$numero = 'numero';
-$telefone ='telefone';
-*/
-
 $insercao = "";
 
 $answer = $_POST['tipoDeConta'];
@@ -37,15 +23,12 @@ if ($answer == "pf") {
     $insercao = "INSERT INTO pessoa_fisica(nome, sobrenome, cpf, email, senha, estado, cidade, bairro, rua, numero, telefone) VALUE('{$nome}', '{$sobrenome}', '{$cpf}', '{$email}', md5('{$senha}'), '{$estado}', '{$cidade}', '{$bairro}', '{$rua}', '{$numero}', '{$telefone}')";
 } else if ($answer == "es") {
     echo 'estabelecimento';
-    $cnpj = 'cnpj';
-    $insercao = "INSERT INTO estabelecimento(nome, cnpj, email, senha, estado, cidade, bairro, rua, numero, telefone) VALUE('{$nome}', '{$sobrenome}', '{$cpf}', '{$email}', md5('{$senha}'), '{$estado}', '{$cidade}', '{$bairro}', '{$rua}', '{$numero}', '{$telefone}')";
+    $cnpj = $_POST['cnpj'];
+    $insercao = "INSERT INTO estabelecimento(nome, cnpj, email, senha, estado, cidade, bairro, rua, numero, telefone) VALUE('{$nome}', '{$cnpj}', '{$email}', md5('{$senha}'), '{$estado}', '{$cidade}', '{$bairro}', '{$rua}', '{$numero}', '{$telefone}')";
 }
 
+echo $insercao;
 $query = mysqli_query($conexao, $insercao);
-if($query == null) {
-    echo "meu deus";
-}
-
 ?>
 
 

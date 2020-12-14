@@ -1,8 +1,8 @@
 function radioVerify() {
     if($("#option1").prop("checked")) {
         let value1 = 
-        `<input type="text" name="nome" id="nome" placeholder="Nome">
-        <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">`
+        `<input type="text" id="nome" name="nome" placeholder="Nome">
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">`
         document.getElementById('tipoArea').innerHTML = value1;
         let value2 = `<input type="text" name="cpf" placeholder="CPF" id = "cpf">`;
         document.getElementById('CPForCNPJ').innerHTML = value2;

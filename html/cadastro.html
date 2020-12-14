@@ -1,37 +1,3 @@
-<?php
-include("conexao.php");
-
-
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-$estado = $_POST['estado'];
-$cidade = $_POST['cidade'];
-
-$bairro = $_POST['bairro'];
-$rua = $_POST['rua'];
-$numero = $_POST['numero'];
-$telefone = $_POST['telefone'];
-
-$insercao = "";
-
-$answer = $_POST['tipoDeConta'];
-if ($answer == "pf") {
-    echo 'pessoa fisica';
-    $sobrenome = $_POST['sobrenome'];
-    $cpf = $_POST['cpf'];
-    $insercao = "INSERT INTO pessoa_fisica(nome, sobrenome, cpf, email, senha, estado, cidade, bairro, rua, numero, telefone) VALUE('{$nome}', '{$sobrenome}', '{$cpf}', '{$email}', md5('{$senha}'), '{$estado}', '{$cidade}', '{$bairro}', '{$rua}', '{$numero}', '{$telefone}')";
-} else if ($answer == "es") {
-    echo 'estabelecimento';
-    $cnpj = 'cnpj';
-    $insercao = "INSERT INTO estabelecimento(nome, cnpj, email, senha, estado, cidade, bairro, rua, numero, telefone) VALUE('{$nome}', '{$sobrenome}', '{$cpf}', '{$email}', md5('{$senha}'), '{$estado}', '{$cidade}', '{$bairro}', '{$rua}', '{$numero}', '{$telefone}')";
-}
-
-$query = mysqli_query($conexao, $insercao);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +17,7 @@ $query = mysqli_query($conexao, $insercao);
         <div id="middle">
             <div id="inner">
                 <img src="../img/logo.png" alt="">
-                <form method="POST" action="">
+                <form method="POST" action="cadastroConfirm.php">
                     <ul>
                         <li>
                             <label for="option1" class="containerRadio" onchange="radioVerify()">Pessoa Física:
@@ -133,7 +99,7 @@ $query = mysqli_query($conexao, $insercao);
     </div>
     <script src="../js/pluginIBGE.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../js/formatarCadastro.js"></script>
+    <script src="../js/CadastroFormatar.js"></script>
 </body>
 
 </html>
