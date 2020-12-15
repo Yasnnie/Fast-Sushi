@@ -15,6 +15,7 @@ function getEstados() {
         }
         document.getElementById("labelEstados").innerHTML = value;
     });
+    aviso();
 }
 
 function getCidades() {

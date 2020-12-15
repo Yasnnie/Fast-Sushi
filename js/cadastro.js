@@ -90,7 +90,7 @@ function confirmarSenha() {
     }
 }
 
-$(window).on("load", function () {
+function aviso() {
     var query = location.search.slice(1);
     var partes = query.split('&');
     var data = {};
@@ -137,4 +137,4 @@ $(window).on("load", function () {
             confirmButtonColor: '#a11919',
         });
     }
-});
+}
