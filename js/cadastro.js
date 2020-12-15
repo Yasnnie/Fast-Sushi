@@ -90,7 +90,7 @@ function confirmarSenha() {
     }
 }
 
-$(window).on("load", function(){
+$(window).on("load", function () {
     var query = location.search.slice(1);
     var partes = query.split('&');
     var data = {};
@@ -100,26 +100,38 @@ $(window).on("load", function(){
         var valor = chaveValor[1];
         data[chave] = valor;
     });
-    if(data['id'] == 69) {
+    if (data['id'] == 69) {
         Swal.fire({
             title: 'Usuário Cadastrado!',
             text: 'Usuário cadastrado com sucesso no nosso sistema',
             icon: 'success',
-            confirmButtonText: 'OK'
-          })
-    } else if(data['id'] == 79) {
+            confirmButtonText: 'Fazer Login',
+            cancelButtonText: 'Fechar',
+            showCancelButton: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.assign("../html/login.html");
+            }
+        });
+    } else if (data['id'] == 79) {
         Swal.fire({
             title: 'Estabelecimento Cadastrado!',
             text: 'Estabelecimento cadastrado com sucesso no nosso sistema',
             icon: 'success',
-            confirmButtonText: 'OK'
-          });
-    } else if(data['id'] == 401) {
+            confirmButtonText: 'Fazer Login',
+            cancelButtonText: 'Fechar',
+            showCancelButton: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.assign("../html/login.html");
+            }
+        });
+    } else if (data['id'] == 401) {
         Swal.fire({
             title: 'Erro no cadastro',
             text: 'Não foi possível realizar o cadastro, erro no banco de dados. Favor, consultar os administradores do fastSushi',
             icon: 'error',
             confirmButtonText: 'OK'
-          });
+        });
     }
 });
