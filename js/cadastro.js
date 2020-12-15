@@ -105,6 +105,7 @@ $(window).on("load", function () {
             title: 'Usuário Cadastrado!',
             text: 'Usuário cadastrado com sucesso no nosso sistema',
             icon: 'success',
+            confirmButtonColor: '#a11919',
             confirmButtonText: 'Fazer Login',
             cancelButtonText: 'Fechar',
             showCancelButton: true
@@ -119,6 +120,7 @@ $(window).on("load", function () {
             text: 'Estabelecimento cadastrado com sucesso no nosso sistema',
             icon: 'success',
             confirmButtonText: 'Fazer Login',
+            confirmButtonColor: '#a11919',
             cancelButtonText: 'Fechar',
             showCancelButton: true
         }).then((result) => {
@@ -131,7 +133,8 @@ $(window).on("load", function () {
             title: 'Erro no cadastro',
             text: 'Não foi possível realizar o cadastro, erro no banco de dados. Favor, consultar os administradores do fastSushi',
             icon: 'error',
-            confirmButtonText: 'OK'
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#a11919',
         });
     }
 });
