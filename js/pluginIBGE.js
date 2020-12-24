@@ -23,10 +23,7 @@ function getCidades() {
     if (id_estado != "") {
         $.getJSON(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${id_estado}/municipios`, function (cidades) {
             // cidades é um array de cidades do estado
-
             let value = "<option value=\"\" selected>Selecione</option>";
-
-
             cidades.sort((a, b) => {
                 if(a.nome.charCodeAt(0) == b.nome.charCodeAt(0)) {
                     return 0;
@@ -36,7 +33,6 @@ function getCidades() {
                     return 1;
                 }
             });
-
             for (let i = 0; i < cidades.length; i++) {
                 value += `<option value = ${cidades[i].id}>${cidades[i].nome}</option>`;
             }

@@ -29,8 +29,12 @@
 
         </div>
 
-        <div class="barinfo">
+        <div class="barinfo" style="margin-right: 50px;">
             <a href="" class="user"> Usuário</a>
+        </div>
+        
+        <div class="barinfo">
+            <a href="" class="user"> Sair</a>
         </div>
 
     </header>
