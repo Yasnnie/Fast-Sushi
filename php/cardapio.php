@@ -18,35 +18,66 @@
 
 <body>
     <header>
-        <a href="">Inicio</a>
+        <a href="" class="voltar"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         <div class="perfil-loja">
-            <img src="" alt="">
+            <img src="../img/teste.jpg" alt="">
+            <h1>Nome Estabelecimento</h1>
             <p>Endereço</p>
-            <i class="fa fa-phone iconphone" id="phone" aria-hidden="true"></i>
-            <label for="phone">Telefone: (09)40028922 </label>
-            <br>
-            <i class="fa fa-star" id="avaliar" aria-hidden="true"></i>
-            <label for="avaliar">Avaliar</label>
+            <div>
+                <i class="fa fa-phone iconphone" id="phone" aria-hidden="true"></i>
+                <label for="phone">Telefone: (09)40028922 </label>
+            </div>
+            <div class="div-av">
+                <input type="checkbox" name="avaliar" id="avaliar">
+                <label for="avaliar" class="avaliacao-button">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    Avaliar
+                </label>
+            </div>
         </div>
     </header>
 
-<br>
-
-    <div id="box">
+    <main>
         <!-- CADA DIV VAI SER UMA CATEGORIA-->
-        <div>
-            <div class="categoria">
-            <input type="checkbox" id="bebida">
-                
-                <br>
+        <div class="box-categoria">
+            <div class="titulo-categoria">
+                <input type="checkbox" id="bebida">
                 <label for="bebida">
                     <span class="icon"></span>
                     <h3>Nome Categoria</h3>
                 </label>
             </div>
-          
-        </div>
-    </div>
+            <div class="cardapio-pratos">
+                <img src="../img/teste.jpg" alt="">
+                <div class="cardapio-pratos-desc">
+                    <h2>Título da comida</h2>
+                    <p>Descrição da comida</p>
+                </div>
+                <div class="quantity">
+                    <button class="btn minus1">-</button>
+                    <input  id="id_form-0-quantity" min="0" name="form-0-quantity" value="0" min="0"type="number">
+                    <button class="btn add1">+</button>
+                </div>
+            </div>
+            <div class="cardapio-pratos">
+                <img src="../img/teste.jpg" alt="">
+                <div class="cardapio-pratos-desc">
+                    <h2>Título da comida</h2>
+                    <p>Descrição da comida</p>
+                </div>
+                <div class="quantity">
+                    <button class="btn minus1">-</button>
+                    <input  id="id_form-0-quantity" min="0" name="form-0-quantity" value="0" min="0"type="number">
+                    <button class="btn add1">+</button>
+                </div>
+            </div>
+         </div>
+
+         <button>Comprar</button>
+    </main>
+
+
+
 
 </body>
 
