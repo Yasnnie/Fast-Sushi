@@ -186,3 +186,24 @@ main{
     margin-left: 20px;
     color: rgb(116, 0, 0);
 }
+
+main .button-comprar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(116, 0, 0);
+    border: none;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 100px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  main .button-comprar:hover{
+  
+    background: rgb(167, 0, 0);
+    transition: 0.2s;
+  }

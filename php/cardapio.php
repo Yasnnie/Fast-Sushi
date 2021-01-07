@@ -31,10 +31,10 @@
                 while ($row = $result->fetch_array()) {
                     $innerHtml = "
                     <h1>{$row['nome']}</h1>
-                    <p>{$row['estado']}/ {$row['cidade']}/{$row['bairro']}/{$row['rua']}Nº {$row['numero']}</p>
+                    <p>{$row['cidade']}-{$row['estado']} / Bairro: {$row['bairro']} - Rua:{$row['rua']} Nº:{$row['numero']}</p>
                     <div>
                 <i class='fa fa-phone iconphone' id='phone' aria-hidden='true'></i>
-                <label for='phone'>Telefone: {$row['numero']} </label>
+                <label for='phone'>Telefone: {$row['telefone']} </label>
             </div>
                     ";
                 }
@@ -65,8 +65,8 @@
                 $escrever = "
                 <div class='box-categoria'>
                     <div class='titulo-categoria'>
-                        <input type='checkbox' id='bebida'>
-                        <label for='bebida'>
+                        <input type='checkbox' id='{$row['nome']}'>
+                        <label for='{$row['nome']}'>
                         <span class='icon'></span>
                             <h3>{$row['nome']}</h3>
                         </label>
@@ -106,7 +106,7 @@
         }
 
         ?>
-        <button>Comprar</button>
+        <button class="button-comprar">Comprar</button>
     </main>
 
 
