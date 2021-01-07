@@ -1,5 +1,4 @@
 <?php
-
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +31,9 @@
         <div class="barinfo" style="margin-right: 50px;">
             <a href="" class="user"> Usuário</a>
         </div>
-        
+
         <div class="barinfo">
-            <a href="" class="user"> Sair</a>
+            <a href="systemLogoff.php" class="user"> Sair</a>
         </div>
 
     </header>
@@ -43,45 +42,58 @@
     <div id="blocoEstabelecimentos">
         <div id="buscarRegiao">
             <div class="aux">
-            <label for="">Estado:</label>
-            <div id="" class="select-box">
-                <select name="" id="">
-                    <option value="">Selecione</option>
-                    <option value="">Opção 2</option>
-                    <option value="">Opção 3</option>
-                </select>
-            </div>
-            <label for="">Cidade:</label>
-            <div class="select-box">
-                <select name="" id="">
-                    <option value="">Selecione</option>
-                    <option value="">Opção 2</option>
-                    <option value="">Opção 3</option>
-                </select>
-            </div>
+                <label for="">Estado:</label>
+                <div id="" class="select-box">
+                    <select name="" id="">
+                        <option value="">Selecione</option>
+                        <option value="">Opção 2</option>
+                        <option value="">Opção 3</option>
+                    </select>
+                </div>
+                <label for="">Cidade:</label>
+                <div class="select-box">
+                    <select name="" id="">
+                        <option value="">Selecione</option>
+                        <option value="">Opção 2</option>
+                        <option value="">Opção 3</option>
+                    </select>
+                </div>
                 <a href="">Buscar <i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
-          
-           
+
+
         </div>
 
         <div id="estabelecimentos">
             <ul>
-                <li>
-                    <img src="../img/login.png" alt="">
-                    <div class="descEstabelecimento">
-                        <a href="">Nome do estabelecimento</a>
-                        <h3>Endereço:Acre/ Acrelandia/ Rua da casa amarela Nº 1000</h3>
 
-                        <div class="phone">
-                            <i class="fa fa-phone , iconphone" aria-hidden="true"></i>
-                            <label for="">Telefone: (09)40028922 </label>
-                            <div class="avalicao">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                <?php
+                include("conexao.php");
+
+                $sql = "SELECT * FROM estabelecimento";
+                $result = mysqli_query($conexao, $sql);
+                $rows = mysqli_num_rows($result);
+                
+                if ($rows == 0) {
+                    echo "<p>Não existe estabelecimentos cadastrados no nosso sistema</p>";
+                } else {
+                    while ($row = $result->fetch_array()) {
+                        $innerHtml = "
+                        <li>
+                    <img src='../img/login.png' alt=''>
+                    <div class='descEstabelecimento'>
+                        <a href='./cardapio.php?id={$row['id']}'>{$row['nome']}</a>
+                        <h3>Endereço:{$row['estado']}/ {$row['cidade']}/{$row['bairro']}/{$row['rua']}Nº {$row['numero']}</h3>
+
+                        <div class='phone'>
+                            <i class='fa fa-phone , iconphone' aria-hidden='true'></i>
+                            <label for=''>Telefone: {$row['telefone']} </label>
+                            <div class='avalicao'>
+                                <i class='fa fa-star' aria-hidden='true'></i>
+                                <i class='fa fa-star' aria-hidden='true'></i>
+                                <i class='fa fa-star' aria-hidden='true'></i>
+                                <i class='fa fa-star' aria-hidden='true'></i>
+                                <i class='fa fa-star' aria-hidden='true'></i>
                             </div>
 
                         </div>
@@ -90,94 +102,19 @@
 
                     </div>
 
-                    <div class="hours">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i><label for="">12h~21</label>
+                    <div class='hours'>
+                        <i class='fa fa-clock-o' aria-hidden='true'></i><label for=''>12h~21</label>
                     </div>
 
                 </li>
-                <li>
-                    <img src="../img/login.png" alt="">
-                    <div class="descEstabelecimento">
-                        <a href="">Nome do estabelecimento</a>
-                        <h3>Endereço:Acre/ Acrelandia/ Rua da casa amarela Nº 1000</h3>
-
-                        <div class="phone">
-                            <i class="fa fa-phone , iconphone" aria-hidden="true"></i>
-                            <label for="">Telefone: (09)40028922 </label>
-                            <div class="avalicao">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-
-                        </div>
-                        <p>Descrição de estabelecimento</p>
-
-                    </div>
-                    <div class="hours">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i><label for="">12h~21</label>
-                    </div>
-
-                </li>
-
-                <li>
-                    <img src="../img/login.png" alt="">
-                    <div class="descEstabelecimento">
-                        <a href="">Nome do estabelecimento</a>
-                        <h3>Endereço:Acre/ Acrelandia/ Rua da casa amarela Nº 1000</h3>
-
-                        <div class="phone">
-                            <i class="fa fa-phone , iconphone" aria-hidden="true"></i>
-                            <label for="">Telefone: (09)40028922 </label>
-                            <div class="avalicao">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-
-                        </div>
-                        <p>Descrição de estabelecimento</p>
-
-                    </div>
-                    <div class="hours">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i><label for="">12h~21</label>
-                    </div>
-
-                </li>
-                <li>
-                    <img src="../img/login.png" alt="">
-                    <div class="descEstabelecimento">
-                        <a href="">Nome do estabelecimento</a>
-                        <h3>Endereço:Acre/ Acrelandia/ Rua da casa amarela Nº 1000</h3>
-
-                        <div class="phone">
-                            <i class="fa fa-phone , iconphone" aria-hidden="true"></i>
-                            <label for="">Telefone: (09)40028922 </label>
-                            <div class="avalicao">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-
-                        </div>
-                        <p>Descrição de estabelecimento</p>
-
-                    </div>
-                    <div class="hours">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i><label for="">12h~21</label>
-                    </div>
-
-                </li>
+                        ";
+                        echo $innerHtml;
+                    }
+                }
+                ?>
             </ul>
         </div>
     </div>
 
 </body>
-
 </html>

@@ -18,15 +18,29 @@
 
 <body>
     <header>
-        <a href="" class="voltar"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        <a href="./overview.php" class="voltar"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         <div class="perfil-loja">
             <img src="../img/teste.jpg" alt="">
-            <h1>Nome Estabelecimento</h1>
-            <p>Endereço</p>
-            <div>
-                <i class="fa fa-phone iconphone" id="phone" aria-hidden="true"></i>
-                <label for="phone">Telefone: (09)40028922 </label>
+            <?php
+            include("conexao.php");
+            $sql = "SELECT * FROM estabelecimento WHERE id = {$_GET['id']}";
+            $result = mysqli_query($conexao, $sql);
+            $rows = mysqli_num_rows($result);
+            if ($rows == 0) {
+            } else {
+                while ($row = $result->fetch_array()) {
+                    $innerHtml = "
+                    <h1>{$row['nome']}</h1>
+                    <p>{$row['estado']}/ {$row['cidade']}/{$row['bairro']}/{$row['rua']}Nº {$row['numero']}</p>
+                    <div>
+                <i class='fa fa-phone iconphone' id='phone' aria-hidden='true'></i>
+                <label for='phone'>Telefone: {$row['numero']} </label>
             </div>
+                    ";
+                }
+                echo $innerHtml;
+            }
+            ?>
             <div class="div-av">
                 <input type="checkbox" name="avaliar" id="avaliar">
                 <label for="avaliar" class="avaliacao-button">
@@ -39,41 +53,60 @@
 
     <main>
         <!-- CADA DIV VAI SER UMA CATEGORIA-->
-        <div class="box-categoria">
-            <div class="titulo-categoria">
-                <input type="checkbox" id="bebida">
-                <label for="bebida">
-                    <span class="icon"></span>
-                    <h3>Nome Categoria</h3>
-                </label>
-            </div>
-            <div class="cardapio-pratos">
-                <img src="../img/teste.jpg" alt="">
-                <div class="cardapio-pratos-desc">
-                    <h2>Título da comida</h2>
-                    <p>Descrição da comida</p>
-                </div>
-                <div class="quantity">
-                    <button class="btn minus1">-</button>
-                    <input  id="id_form-0-quantity" min="0" name="form-0-quantity" value="0" min="0"type="number">
-                    <button class="btn add1">+</button>
-                </div>
-            </div>
-            <div class="cardapio-pratos">
-                <img src="../img/teste.jpg" alt="">
-                <div class="cardapio-pratos-desc">
-                    <h2>Título da comida</h2>
-                    <p>Descrição da comida</p>
-                </div>
-                <div class="quantity">
-                    <button class="btn minus1">-</button>
-                    <input  id="id_form-0-quantity" min="0" name="form-0-quantity" value="0" min="0"type="number">
-                    <button class="btn add1">+</button>
-                </div>
-            </div>
-         </div>
+        <?php
+        include("conexao.php");
+        $sql = "SELECT * FROM categoria WHERE id_estabelecimento = {$_GET['id']}";
+        $result = mysqli_query($conexao, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows == 0) {
+        } else {
+            $escrever = "";
+            while ($row = $result->fetch_array()) {
+                $escrever = "
+                <div class='box-categoria'>
+                    <div class='titulo-categoria'>
+                        <input type='checkbox' id='bebida'>
+                        <label for='bebida'>
+                        <span class='icon'></span>
+                            <h3>{$row['nome']}</h3>
+                        </label>
+                    </div>
+                ";
 
-         <button>Comprar</button>
+                echo $escrever;
+
+                $sql2 = "SELECT * FROM prato WHERE id_estabelecimento = {$_GET['id']}  AND id_categoria = {$row['id']}";
+                $result2 = mysqli_query($conexao, $sql2);
+                $rows2 = mysqli_num_rows($result2);
+
+                while ($row2 = $result2->fetch_array()) {
+                    $escrever = "
+                    <div class='cardapio-pratos'>
+                        <img src='../img/teste.jpg' alt=''>
+                        <div class='cardapio-pratos-desc'>
+                            <h2>{$row2['nome']}</h2>
+                            <p>{$row2['descricao']}</p>
+                        </div>
+                        <div class='quantity'>
+                            <button class='btn minus1'>-</button>
+                            <input id='id_form-0-quantity' min='0' name='form-0-quantity' value='0' min='0' type='number'>
+                            <button class='btn add1'>+</button>
+                        </div>
+                    </div>
+                    ";
+
+                    echo $escrever;
+                }
+
+                $escrever = "
+                    </div>
+                ";
+            }
+            echo $escrever;
+        }
+
+        ?>
+        <button>Comprar</button>
     </main>
 
 

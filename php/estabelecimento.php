@@ -1,7 +1,7 @@
 <?php
 
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +25,16 @@
             <button name="historico" onclick="showHistorico()">Histórico de Pedidos</button>
             <button name="perfil" onclick="editarPerfil()">Editar Perfil</button>
             <button name="cardapio" onclick="editarCardapio()">Cardápio</button>
-            <button>Sair</button>
+            <button onclick="logoff()">Sair</button>
 
         </div>
+
+        <script>
+            function logoff() {
+                window.location.replace("./systemLogoff.php");
+            }
+        </script>
+
 
         <div class="pedido">
             <table>
@@ -183,47 +190,52 @@
     <div class="cardapio" id="cardapio">
         <i class="fa fa-times" aria-hidden="true" onclick="fecharAba()"></i>
         <div class="categoria">
-            <form action="">
+            <form action="./criarPedidoOuCategoria.php?tipo=categoria" method="POST">
                 <h1>Criar Nova Categoria:</h1>
                 <label for="">Nome da Categoria:</label>
                 <br>
-                <input type="text">
+                <input type="text" name="nomeCategoria" id="nomeCategoria">
                 <br>
-                <button>Adicionar ao Cardapio</button>
+                <button type="submit">Adicionar ao Cardapio</button>
             </form>
         </div>
         <hr>
         <div class="prato">
-            <form action="" method="post">
+            <form action="./criarPedidoOuCategoria.php?tipo=prato" method="post">
                 <h1>Adicionar um prato novo:</h1>
                 <!--<input type="file" name="" id="">-->
                 <label for="">Nome do Prato:</label>
                 <br>
-                <input type="text" placeholder=" Nome do Prato">
-                <br>
-                <label for=""> Foto:</label>
-                <input type="file" id="actual-btn" class="file-close">
-                <label for="actual-btn" class="file">Escolha uma Foto</label>
-                <span id="file-chosen">Nenhum Arquivo Selecionado</span>
-
-                <br>
+                <input type="text" placeholder=" Nome do Prato" name="nomePrato">
                 <br>
                 <label for="">Selecione uma categoria:</label>
                 <div class="select-box">
-                    <select name="" id="">
-                        <option value="">Selecione</option>
-                        <option value="">Option 1</option>
+                    <select name="categoriaPrato" id="">
+                        <?php
+                        include("conexao.php");
+                        $jsonString = file_get_contents('../json/login.json');
+                        $data = json_decode($jsonString, true);
+                        $sql = "SELECT * FROM categoria WHERE id_estabelecimento = {$data['idLogado']}";
+                        $result = mysqli_query($conexao, $sql);
+                        $rows = mysqli_num_rows($result);
+                        if ($rows == 0) {
+                            echo "<option value=''>Selecione</option>";
+                        } else {
+                            while ($row = $result->fetch_array()) {
+                                echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                            }
+                        }
+                        ?>
                     </select>
                 </div>
 
                 <label for="">Descrição:</label>
                 <br>
-                <textarea name="" id="" maxlength="200"></textarea>
+                <textarea name="descricaoPrato" id="" maxlength="200"></textarea>
                 <br>
-                <button>Adicionar ao Cardapio</button>
+                <button type="submit">Adicionar ao Cardapio</button>
             </form>
         </div>
-
     </div>
 
 

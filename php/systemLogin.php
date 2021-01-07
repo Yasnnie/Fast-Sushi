@@ -28,7 +28,7 @@ if ($rows == 0) {
         $data['tipoConta'] = "estabelecimento";
         $newJsonString = json_encode($data);
         file_put_contents('../json/login.json', $newJsonString);
-        header("Location: ../php/estabelecimento.php");
+        header("Location: ./estabelecimento.php");
     }
 } else {
     $idEncontrado = 0;
